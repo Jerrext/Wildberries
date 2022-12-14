@@ -1,6 +1,7 @@
 /* Сюда мы будем импортировать css файлы */
 @import "./base/_fonts.css";
 @import "./base/_reset.css";
+@import "./base/_rules.css";
 @import "./blocks/_header.css";
 @import "./blocks/_slider.css";
 @import "./blocks/_cards.css";
