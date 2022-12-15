@@ -1,6 +1,7 @@
 import { cardData, basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
+import { setItem } from "../utils/setLocalItems.js";
 
 const main = document.getElementById("main")
 
@@ -48,6 +49,7 @@ const renderCard = (elem, to) => {
 
     const addToBasket = createBtn("Добавить в корзину", "cards__basket-add-btn", discountBasketBtnWrapper, "click", () => {
         basketData.push(elem)
+        setItem(basketData)
     })
 
     //
