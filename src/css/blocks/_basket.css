@@ -1,0 +1,11 @@
+.basket-main{
+	margin: 0;
+	padding: 0;
+	background: url("../../img/cart.png") no-repeat 0 0;
+	height:60px;
+   width: 60px;
+   border:0;
+}
+.basket-main:hover{
+	scale: 1.2;
+}
