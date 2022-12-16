@@ -11,3 +11,4 @@ export const header__basket = document.createElement('div')
 header__basket.classList.add('basket')
 
 header.appendChild(header__logo, header__searchInput, header__basket)
+
