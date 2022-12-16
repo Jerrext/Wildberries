@@ -1,0 +1,8 @@
+.header {
+    width: 100%;
+    height: 168px;
+    background-image: url(../../img/shapka_line_ny_2022.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
