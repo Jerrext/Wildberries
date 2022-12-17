@@ -21,11 +21,11 @@ main.appendChild(kadr)
 
 
 const images = [
-    './slid1.jpg',
-    './slid2.jpg',
-    './slid3.jpg',
-    './slid4.jpg',
-    './slid5.jpg',
+'https://images.wbstatic.net/bners1/big_new__22.jpg',
+    'https://images.wbstatic.net/bners1/big_brand_17_12_22.jpg',
+    'https://images.wbstatic.net/bners1/big_cosmetics1.jpg',
+    'https://images.wbstatic.net/bners1/big_toys.jpg',
+    'https://images.wbstatic.net/bners1/big_inditexx_14_11_22.jpg',
 ];
 
 images.forEach(src => {
