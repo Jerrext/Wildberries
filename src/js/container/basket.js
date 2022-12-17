@@ -3,7 +3,8 @@ import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
 // import { setItem } from "../utils/setLocalItems.js";
 
-const basketData1 = [
+// заменить везде basketData1 на import store.js/basketdata, когда будет
+let basketData1 = [
 	{
 		id: 1,
 		imgSrc: "/1.dc197a9a.jpg",
@@ -26,40 +27,83 @@ const basketData1 = [
 		thing: "Комбинезон"
 	}
 ]
+
 const header = document.getElementById("header")
 
-const basket = createBtn("", "basket-main", header, "click", () => {
-})
 
+// создание wrapper для всей корзины
 const basketWrapper = createElem("div", {
 	className: "basketWrapper",
 }, header)
 
 
-let itemWrapper = document.createElement("div")
-itemWrapper.style.display = "grid"
-itemWrapper.style.gridTemplateColumns = "100px 20px"
+const basketTopWrapper = createElem("div", {
+	className: "basketTopWrapper",
+}, basketWrapper)
+const basketTopText = createElem("span", {
+	className: "basketTopText",
+	innerText: "Корзина"
+}, basketTopWrapper)
+basketWrapper.style.display = "none"
+
+//создание кнопки для корзины
+const basket = createBtn("", "basket-main", header, "click", () => {
+	if (basketWrapper.style.display === "none") {
+		basketWrapper.style.display = "grid"
+	} else { basketWrapper.style.display = "none" }
+})
+// не совсем уверен как делать. поидее тупо обнулять массив, но не хочет (да и потом обновлять как-то корзину)
+// или через local/session storage
+const deleteAllBasket = createBtn("Очистить корзину", "deleteAllBasket", basketTopWrapper, "click", () => {
+	basketData1 = []
+})
+
+// наполнение wrapper корзины
+let itemWrapper = createElem("div", {
+	className: "itemWrapper",
+}, basketWrapper)
+
 
 basketData1.forEach((item) => {
 	const itemText = document.createElement("p")
 	itemText.innerText = item.thing
 	const itemPrice = document.createElement("p")
-	itemPrice.innerText = item.price
+	itemPrice.innerText = item.price.toFixed(2) + "р"
 	itemWrapper.appendChild(itemText)
 	itemWrapper.appendChild(itemPrice)
 })
 basketWrapper.appendChild(itemWrapper)
-
+let discountTotal = basketData1.reduce(function (sum, elem) {
+	return sum + (elem.price * (elem.discount / 100));
+}, 0);
+let discountTotalFixed = discountTotal.toFixed(2)
 let discountForAll = basketData1.reduce(function (sum, elem) {
 	return sum + elem.price - (elem.price * (elem.discount / 100));
 }, 0);
 let discountForAllFixed = discountForAll.toFixed(2)
 
-console.log(discountForAll);
-const getSumOverall = document.createElement("p")
-getSumOverall.innerText = `Итого с учетом скидки:${discountForAllFixed} рублей `
-basketWrapper.appendChild(getSumOverall)
+const discountPriceText = createElem("p", {
+	innerText: "Скидка"
+}, itemWrapper)
+const discountPriceNum = createElem("p", {
+	innerText: `${discountTotalFixed}р`
+}, itemWrapper)
 
+console.log(discountForAll);
+
+const totalPriceWrapper = createElem("div", {
+	className: "totalPriceWrapper",
+}, basketWrapper)
+const totalPriceText = createElem("p", {
+	innerText: "Итого со скидкой:"
+}, totalPriceWrapper)
+const getSumOverall = document.createElement("p")
+getSumOverall.innerText = `${discountForAllFixed} р `
+totalPriceWrapper.appendChild(getSumOverall)
+
+
+const buyBasket = createBtn("Сделать заказ", "buyBasket", basketWrapper, "click", () => {
+})
 
 
 

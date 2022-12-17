@@ -1,11 +1,91 @@
 .basket-main{
+	cursor: pointer;
 	margin: 0;
 	padding: 0;
 	background: url("../../img/cart.png") no-repeat 0 0;
 	height:60px;
-   width: 60px;
-   border:0;
+	width: 60px;
+	border:0;
+	transition: all 0.3s;
 }
 .basket-main:hover{
-	scale: 1.2;
+	scale: 1.1;
+}
+
+.basketTopWrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+padding: 20px 10px;
+}
+.basketTopText{
+	width: 80px;
+}
+.deleteAllBasket{
+	cursor: pointer;
+	width: 130px;
+	height: 30px;
+	background-color: #eaa1a193;
+	border: 1px solid rgb(165, 51, 51);
+	border-radius: 20px;
+	transition: all 0.3s;
+}
+.deleteAllBasket:hover{
+	background-color: #d7636393;
+}
+.basketWrapper{
+	display: grid;
+	max-width: 500px;
+	max-height: 1000px;
+	border: 1px solid rgb(182, 182, 182);
+	box-shadow: 1px 2px 3px 4px rgba(12,12,12,0.2);
+	border-radius: 10px;
+	padding: 20px 20px;
+	/* тк позиция fixed(либо absolute), то надо вручную двигать*/
+	position: absolute;
+	top:70px ;
+	background: white;
+}
+
+.itemWrapper{
+display: grid;
+grid-template-columns: 4fr 1fr;
+justify-content: space-around;
+}
+.itemWrapper>:not(:nth-last-child(1)):not(:nth-last-child(2)){
+	padding: 5px 10px;
+	border-bottom: 2px dashed #FF84A1;
+}
+.itemWrapper>:nth-last-child(1),.itemWrapper>:nth-last-child(2){
+	padding: 5px 10px;
+	border-bottom: 2px dashed #e4c113;
+}
+.totalPriceWrapper{
+	margin-top: 30px;
+	display: grid;
+	grid-template-columns: 4fr 1fr;
+	justify-content: space-around;
+}
+.totalPriceWrapper>p{
+	padding: 10px 10px;
+	font-size: 18px;
+	font-weight: 600;
+} 
+
+.buyBasket{
+	cursor: pointer;
+	text-align: center;
+	padding-left: auto;
+	padding-right: auto;
+	border: none;
+	height: 40px;
+	width: 200px;
+	background-color: rgba(225, 139, 27, 0.798);
+	box-shadow: 1px 2px 2px 2px rgba(175, 104, 12, 0.624);
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+.buyBasket:hover{
+	background-color: rgba(225, 109, 27, 0.798);
+	box-shadow: 1px 2px 2px 2px rgba(175, 104, 12, 0.624);
 }
