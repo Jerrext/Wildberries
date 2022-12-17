@@ -70,10 +70,10 @@ prev.addEventListener('onclick',function(){
     makeTimer();  
 })
 
-span.addEventListener('onclick',function(n) {
-  showSlides(slideIndex = n);
-  makeTimer();
-})
+// span.addEventListener('onclick',function(n) {
+//   showSlides(slideIndex = n);
+//   makeTimer();
+// })
 
   
 function showSlides(n) {
