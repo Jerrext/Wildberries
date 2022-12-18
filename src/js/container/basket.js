@@ -1,8 +1,6 @@
-// import { cardData, basketData } from "../store.js";
+import { basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
-// import { setItem } from "../utils/setLocalItems.js";
-
 // заменить везде basketData1 на import store.js/basketdata, когда будет
 let basketData1 = [
 	{
