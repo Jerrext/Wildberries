@@ -53,11 +53,16 @@ display: grid;
 grid-template-columns: 4fr 1fr;
 justify-content: space-around;
 }
-.itemWrapper>:not(:nth-last-child(1)):not(:nth-last-child(2)){
+.itemWrapper>p{
 	padding: 5px 10px;
 	border-bottom: 2px dashed #FF84A1;
 }
-.itemWrapper>:nth-last-child(1),.itemWrapper>:nth-last-child(2){
+.discountWrapper{
+	display: grid;
+grid-template-columns: 4fr 1fr;
+justify-content: space-around;
+}
+.discountWrapper>.Discount{
 	padding: 5px 10px;
 	border-bottom: 2px dashed #e4c113;
 }
