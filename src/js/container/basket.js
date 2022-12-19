@@ -65,20 +65,24 @@ const deleteAllBasket = createBtn("Очистить корзину", "deleteAllB
 })
 
 // наполнение wrapper корзины
-let itemWrapper = createElem("div", {
+export const itemWrapper = createElem("div", {
 	className: "itemWrapper",
 }, basketWrapper)
 
 
-basketData.forEach((item) => {
-	const itemText = document.createElement("p")
-	itemText.innerText = item.thing
-	const itemPrice = document.createElement("p")
-	itemPrice.innerText = item.price.toFixed(2) + "р"
-	itemWrapper.appendChild(itemText)
-	itemWrapper.appendChild(itemPrice)
-})
+// basketData.forEach((item) => {
+// 	const itemText = document.createElement("p")
+// 	itemText.innerText = item.thing
+// 	const itemPrice = document.createElement("p")
+// 	itemPrice.innerText = item.price.toFixed(2) + "р"
+// 	itemWrapper.appendChild(itemText)
+// 	itemWrapper.appendChild(itemPrice)
+// })
+
+
 basketWrapper.appendChild(itemWrapper)
+
+
 let discountTotal = basketData.reduce(function (sum, elem) {
 	return sum + (elem.price * (elem.discount / 100));
 }, 0);
