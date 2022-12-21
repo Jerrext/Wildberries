@@ -82,15 +82,16 @@ export const itemWrapper = createElem("div", {
 
 basketWrapper.appendChild(itemWrapper)
 
+// я перенес то что снизу закомменчено в cards и туда же сделал export discountPriceNum и getSumOverall, все работает вроде
 
-let discountTotal = basketData.reduce(function (sum, elem) {
-	return sum + (elem.price * (elem.discount / 100));
-}, 0);
-let discountTotalFixed = discountTotal.toFixed(2)
-let discountForAll = basketData.reduce(function (sum, elem) {
-	return sum + elem.price - (elem.price * (elem.discount / 100));
-}, 0);
-let discountForAllFixed = discountForAll.toFixed(2)
+// let discountTotal = basketData.reduce(function (sum, elem) {
+// 	return sum + (elem.price * (elem.discount / 100));
+// }, 0);
+// let discountTotalFixed = discountTotal.toFixed(2)
+// let discountForAll = basketData.reduce(function (sum, elem) {
+// 	return sum + elem.price - (elem.price * (elem.discount / 100));
+// }, 0);
+// let discountForAllFixed = discountForAll.toFixed(2)
 
 const discountWrapper = createElem("div", {
 	className: "discountWrapper",
@@ -99,12 +100,10 @@ const discountPriceText = createElem("p", {
 	className: "Discount",
 	innerText: "Скидка"
 }, discountWrapper)
-const discountPriceNum = createElem("p", {
+export const discountPriceNum = createElem("p", {
 	className: "Discount",
-	innerText: `${discountTotalFixed}р`
+	innerText: `0 р`
 }, discountWrapper)
-
-console.log(discountForAll);
 
 const totalPriceWrapper = createElem("div", {
 	className: "totalPriceWrapper",
@@ -112,9 +111,9 @@ const totalPriceWrapper = createElem("div", {
 const totalPriceText = createElem("p", {
 	innerText: "Итого со скидкой:"
 }, totalPriceWrapper)
-const getSumOverall = document.createElement("p")
-getSumOverall.innerText = `${discountForAllFixed} р `
-totalPriceWrapper.appendChild(getSumOverall)
+export const getSumOverall = createElem("p", {
+	innerText: `0 р`
+}, totalPriceWrapper)
 
 
 const buyBasket = createBtn("Сделать заказ", "buyBasket", basketWrapper, "click", () => {

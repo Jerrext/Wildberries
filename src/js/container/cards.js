@@ -2,7 +2,7 @@ import { cardData, basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
 import { setItem } from "../utils/setLocalItems.js";
-import { itemWrapper } from "./basket.js";
+import { itemWrapper, discountPriceNum, getSumOverall } from "./basket.js";
 
 const main = document.getElementById("main")
 
@@ -57,7 +57,20 @@ const renderCard = (elem, to) => {
         const itemPrice = createElem("p", {
             textContent: price.toFixed(2) + "р"
         }, itemWrapper)
-        console.log(basketData)
+
+        // получилось что-то типо такого
+
+        let discountTotal = basketData.reduce(function (sum, elem) {
+            return sum + (elem.price * (elem.discount / 100));
+        }, 0);
+        let discountTotalFixed = discountTotal.toFixed(2)
+        discountPriceNum.innerText = `${discountTotalFixed} р`
+
+        let discountForAll = basketData.reduce(function (sum, elem) {
+            return sum + elem.price - (elem.price * (elem.discount / 100));
+        }, 0);
+        let discountForAllFixed = discountForAll.toFixed(2)
+        getSumOverall.innerText = `${discountForAllFixed} р`
     })
 
     //
