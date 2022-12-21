@@ -14,7 +14,6 @@ body {
     width: 78%;
     height: 60px;
     display: flex;
-    background-color: rgba(72, 235, 86, 0.258);
     position: relative;
     top: 50px;
     left: 11%;
@@ -33,40 +32,57 @@ body {
     height: 56px;
     background-color: rgba(255,255,255,.2);
     border-radius: 56px;
+    border: none;
     position: relative;
     font-size: 18px;
     line-height: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 50px;
 }
 .searchInput:hover {
     background: rgba(255, 255, 255, 0.5);
     transition: background .3s ease 0s;
 }
-
 .header__container_nav {
-    width: 150px;
-    height: 60px;
-    background-color: rgba(41, 178, 132, 0.552);
+    display: block;
+}
+.header__container_nav_icons {
+    width: 200px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
+    margin-left: 15px;
+}
+.header__container_nav_title {
+    width: 230px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
 }
 .header__address {
-    border: 1px solid black;
-    width: 27px;
-    height: 27px;
+    width: 16px;
+    height: 24px;
+    background-image: url(../../img/address.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 .header__profile{
-    border: 1px solid black;
-    width: 27px;
-    height: 27px;
+    width: 19px;
+    height: 20px;
+    background-image: url(../../img/profile.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .header__basket {
     width: 27px;
     height: 27px;
-    background-image: url(../../img/sprite.svg);
+    background-image: url(../../img/basket.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: 1px solid black;
 }
