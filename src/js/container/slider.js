@@ -2,9 +2,17 @@ import {images} from "../store.js"
 
 const main=document.getElementById('main')
 
+const sliderSection = document.createElement("section")
+sliderSection.classList.add("slider")
+main.appendChild(sliderSection)
+
+const sliderContainer = document.createElement("div")
+sliderContainer.classList.add("container")
+sliderSection.appendChild(sliderContainer)
+
 const slayder= document.createElement('div')
 slayder.classList.add("adaptivn-slayder")
-main.appendChild(slayder)
+sliderContainer.appendChild(slayder)
 
 const prev = document.createElement('button')
 prev.classList.add('prev')
@@ -18,7 +26,7 @@ slayder.appendChild(next)
 
 const kadr= document.createElement("div")
 kadr.classList.add("kadr")
-main.appendChild(kadr)
+sliderContainer.appendChild(kadr)
 
 images.forEach(src => {
     const img = document.createElement('img');
