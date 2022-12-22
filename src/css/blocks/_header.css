@@ -28,6 +28,7 @@ body {
 }
 .searchInput {
     width: 80%;
+    padding-left: 23px;
     height: 56px;
     background-color: rgba(255,255,255,.2);
     border-radius: 56px;
@@ -36,10 +37,16 @@ body {
     font-size: 18px;
     line-height: 24px;
     margin: 0 50px;
+    outline: none;
 }
+
 .searchInput:hover {
     background: rgba(255, 255, 255, 0.5);
     transition: background .3s ease 0s;
+}
+
+.searchInput:focus {
+    background-color: #fff;
 }
 
 ::-webkit-input-placeholder {
