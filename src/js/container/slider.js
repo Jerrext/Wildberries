@@ -1,15 +1,16 @@
+import {images} from "../store.js"
 const main=document.getElementById('main')
 
 const slayder= document.createElement('div')
 slayder.classList.add("adaptivn-slayder")
 main.appendChild(slayder)
 
-const prev = document.createElement('a')
+const prev = document.createElement('button')
 prev.classList.add('prev')
 prev.innerText="❮"
 slayder.appendChild(prev)
 
-const next = document.createElement('a')
+const next = document.createElement('button')
 next.classList.add('next')
 next.innerText="❯"
 slayder.appendChild(next)
@@ -17,14 +18,6 @@ slayder.appendChild(next)
 const kadr= document.createElement("div")
 kadr.classList.add("kadr")
 main.appendChild(kadr)
-
-const images = [
-    'https://images.wbstatic.net/bners1/big_new__22.jpg',
-    'https://images.wbstatic.net/bners1/big_brand_17_12_22.jpg',
-    'https://images.wbstatic.net/bners1/big_cosmetics1.jpg',
-    'https://images.wbstatic.net/bners1/big_toys.jpg',
-    'https://images.wbstatic.net/bners1/big_inditexx_14_11_22.jpg',
-];
 
 images.forEach(src => {
     const img = document.createElement('img');
@@ -39,9 +32,9 @@ images.forEach(src => {
 
 const span =[1,2,3,4,5];
 
-span.forEach(src => {
-
-    const spans = document.createElement('span');
+span.forEach(item => {
+  const spans = document.createElement('span');
+  spans.item=item;
     spans.className = 'point-kadr';
     kadr.appendChild(spans)
 
@@ -51,30 +44,29 @@ let timer = 0;
 makeTimer(); 
 function makeTimer(){
    clearInterval(timer) 
-   timer = setInterval(function(){
+   timer = setInterval(function (){
      slideIndex++;
      showSlides(slideIndex);
-   },2000);
+   },3000);
  }
 
  let slideIndex = 1;
  showSlides(slideIndex);
 
-next.addEventListener('onclick', function () {
+next.addEventListener('click', function () {
   showSlides(slideIndex += 1);
   makeTimer();
 })
 
-prev.addEventListener('onclick',function(){
+prev.addEventListener('click',function(){
     showSlides(slideIndex -= 1);
     makeTimer();  
 })
 
-// span.addEventListener('onclick',function(n) {
-//   showSlides(slideIndex = n);
-//   makeTimer();
-// })
-
+//let spanPoint = document.getElementsByTagName ("span");
+//span.addEventListener("click",function currentSlide(n) {
+ // showSlides(slideIndex = n);
+//})
   
 function showSlides(n) {
   let i;
@@ -94,5 +86,13 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " deystvuyus";
+  
 }
+let hover = document.querySelector(".adaptivn-slayder");
 
+hover.addEventListener("mouseover",function(){
+  window.clearInterval(timer);
+}); 
+hover.addEventListener("mouseout",function(){
+  makeTimer()
+});
