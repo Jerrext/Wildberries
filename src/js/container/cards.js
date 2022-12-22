@@ -3,7 +3,7 @@ import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
 import { setItem } from "../utils/setLocalItems.js";
 
-export const main = document.getElementById("main")
+const main = document.getElementById("main")
 
 const cards = createElem("section", {
     className: "cards"
