@@ -79,12 +79,21 @@ body {
     transition: .3s;
 }
 .header__basket {
+	cursor: pointer;
     width: 27px;
     height: 27px;
-    background-image: url(../../img/basket.svg);
+	border: none;
+    background: url("../../img/basket.svg") no-repeat 0 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+	opacity: 0.6;
+	transition: all 0.3s;
+	text-align: center;
+	
+}
+.header__basket:hover{
+	opacity: 1;
 }
 
 .header__container_nav:hover .header__container_nav_title {
