@@ -1,0 +1,111 @@
+.cards {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+    padding-top: 60px;
+}
+
+.cards__card-wrapper {                
+    flex-basis: 400px;
+    margin-bottom: 40px;
+}
+
+.cards__card-wrapper-top {            
+    position: relative;
+}
+
+.cards__img {
+    width: 100%;                       
+    height: auto;
+    border-radius: 30px;
+}
+
+.cards__quick-view-btn {
+    width: 310px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;                          
+    top: 50%;                          
+    transform: translate(-50%, -50%);   
+    cursor: pointer;
+    border: none;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: .5s;                  
+}
+
+.cards__card-wrapper:hover .cards__quick-view-btn,         
+.cards__card-wrapper:hover .cards__basket-add-btn {         
+    opacity: 100;
+}
+
+.cards__card-wrapper-bottom {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;                                         
+    padding-left: 10px;
+    gap: 10px;
+}
+
+.cards__discount-basket-wrapper{
+    display: flex;
+    gap: 29px;
+    transform: translate(0%, -200%);
+    justify-content: space-evenly;
+    height: 30px;
+}
+
+.cards__discount-percent {
+    color: #cb11ab;
+    font-size: 35px;
+    line-height: 20px;
+    background-color: #fdeef9;
+    font-weight: 700;
+    max-width: 80%;
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+.cards__discount-price {
+    font-size: 40px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #242424;
+    text-decoration: none;
+    max-width: 100%;
+    line-height: 24px;
+    margin-right: 10px;
+}
+
+.cards__actual-price {
+    font-size: 30px;
+    color: #999;
+    text-decoration: line-through;
+    max-width: 100%;
+}
+
+.cards__basket-add-btn {
+    font-size: 17px;
+    cursor: pointer;
+    border: 2px solid #cb11ab;
+    width: 170px;
+    height: 43px;
+    color: #ffff;
+    background-color: #cb11ab;
+    border-radius: 5px;
+    opacity: 0;                      
+    transition: .5s;                 
+} 
+
+.cards__thing {
+    font-size: 30px;
+    line-height: 20px;
+    color: #999;
+    position: relative;
+    padding-top: 5px;
+}
