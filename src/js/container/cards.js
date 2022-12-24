@@ -11,6 +11,14 @@ const cards = createElem("section", {
 	className: "cards"
 }, main)
 
+const cardContainer = createElem("div", {
+	className: "container"
+}, cards)
+
+const cardsWrapper = createElem("div", {
+	className: "cards__wrapper"
+}, cardContainer)
+
 const renderCard = (elem, to) => {
 	const { id, imgSrc, price, discount, thing } = elem
 
@@ -104,7 +112,7 @@ const cardData = () => {
         .then(response => response.json())
         .then(data => {
             toggleSpinner()
-            data.forEach(item => renderCard(item, cards))
+            data.forEach(item => renderCard(item, cardsWrapper))
             console.log(data)
             return data
         })
