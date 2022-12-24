@@ -22,7 +22,7 @@ const header__container_nav = document.createElement('div')
 header__container_nav.classList.add('header__container_nav')
 
 const header__container_nav_icons = document.createElement('div')
-header__container_nav_icons.classList.add('header__container_nav_icons')
+header__container_nav_icons.classList.add('header__container_nav_icons', 'header__basket')
 
 // Корзина
 const fieldOverlay = createElem("div", {
@@ -40,12 +40,19 @@ export const basketWrapper = createElem("div", {
 	className: "basketWrapper",
 }, header__container_nav_icons)
 
-const basket = createBtn("", "header__basket", header__container_nav_icons, "click", () => {
+header__container_nav.addEventListener("click", () => {
 	if (basketWrapper.style.display === "none") {
 		basketWrapper.style.display = "grid"
 		fieldOverlay.style.display = "block"
 	} else { basketWrapper.style.display = "none" }
 })
+
+// const basket = createBtn("", "header__basket", header__container_nav_icons, "click", () => {
+// 	if (basketWrapper.style.display === "none") {
+// 		basketWrapper.style.display = "grid"
+// 		fieldOverlay.style.display = "block"
+// 	} else { basketWrapper.style.display = "none" }
+// })
 // const header__basket = document.createElement('div')
 // header__basket.classList.add('header__basket')
 // 
