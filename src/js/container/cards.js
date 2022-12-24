@@ -1,15 +1,16 @@
-import { cardData, basketData } from "../store.js";
+import { basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
 import { setItem } from "../utils/setLocalItems.js";
+import { toggleSpinner } from "./spinner.js"
 
 const main = document.getElementById("main")
 
-const cards = createElem("section", {
+export const cards = createElem("section", {
     className: "cards"
 }, main)
 
-const renderCard = (elem, to) => {
+export const renderCard = (elem, to) => {
     const { id, imgSrc, price, discount, thing } = elem
 
     const cardWrapper = createElem("div", {
@@ -70,4 +71,17 @@ const renderCard = (elem, to) => {
     }, cardWrapperBottom)
 }
 
-cardData.forEach(item => renderCard(item, cards))
+const cardData = () => {
+    toggleSpinner()
+
+    return fetch("https://63a6f19159fd83b1bb3b0670.mockapi.io/cardData")
+        .then(response => response.json())
+        .then(data => {
+            toggleSpinner()
+            data.forEach(item => renderCard(item, cards))
+            console.log(data)
+            return data
+        })
+}
+
+cardData()
