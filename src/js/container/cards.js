@@ -52,6 +52,7 @@ const renderCard = (elem, to) => {
 	const addToBasket = createBtn("Добавить в корзину", "cards__basket-add-btn", discountBasketBtnWrapper, "click", () => {
 		basketData.push(elem)
 		setItem(basketData)
+        console.log(basketData)
 		//
 		const itemDiv = createElem("div", {
 			className: "itemContainer",
@@ -65,7 +66,7 @@ const renderCard = (elem, to) => {
 			textContent: thing
 		}, itemDiv)
 		const itemPrice = createElem("p", {
-			textContent: price.toFixed(2) + "р"
+			textContent: price + "р"
 		}, itemDiv)
 		//
 		const itemDelete = createBtn("X", "itemDelete", itemDiv, "click", (e) => {

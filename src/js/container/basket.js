@@ -13,7 +13,7 @@ export const discountRecalc = () => {
 	discountPriceNum.innerText = `${discountTotalFixed} р`
 
 	let discountForAll = basketData.reduce(function (sum, elem) {
-		return sum + elem.price - (elem.price * (elem.discount / 100));
+		return sum + (elem.price - (elem.price * (elem.discount / 100)));
 	}, 0);
 	let discountForAllFixed = discountForAll.toFixed(2)
 	getSumOverall.innerText = `${discountForAllFixed} р`
