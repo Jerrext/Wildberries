@@ -18,11 +18,7 @@ header__searchInput.setAttribute('type', 'text')
 header__searchInput.placeholder = "Я ищу..."
 header__searchInput.classList.add('searchInput')
 
-const header__container_nav = document.createElement('div')
-header__container_nav.classList.add('header__container_nav')
 
-const header__container_nav_icons = document.createElement('div')
-header__container_nav_icons.classList.add('header__container_nav_icons')
 
 // Корзина
 const fieldOverlay = createElem("div", {
@@ -35,19 +31,31 @@ fieldOverlay.addEventListener("click", (e) => {
 		basketWrapper.style.display = "none"
 	}
 })
-
-export const basketWrapper = createElem("div", {
-	className: "basketWrapper",
-}, header__container_nav_icons)
-
-const basket = createBtn("", "header__basket", header__container_nav_icons, "click", () => {
+//
+const header__container_nav = document.createElement('div')
+header__container_nav.classList.add('header__container_nav')
+header__container_nav.addEventListener("click", (e) => {
 	if (basketWrapper.style.display === "none") {
 		basketWrapper.style.display = "grid"
 		fieldOverlay.style.display = "block"
 	} else { basketWrapper.style.display = "none" }
 })
-// const header__basket = document.createElement('div')
-// header__basket.classList.add('header__basket')
+
+const header__container_nav_icons = document.createElement('div')
+header__container_nav_icons.classList.add('header__container_nav_icons')
+//
+export const basketWrapper = createElem("div", {
+	className: "basketWrapper",
+}, header__container)
+
+// const basket = createBtn("", "header__basket", header__container_nav_icons, "click", () => {
+// 	if (basketWrapper.style.display === "none") {
+// 		basketWrapper.style.display = "grid"
+// 		fieldOverlay.style.display = "block"
+// 	} else { basketWrapper.style.display = "none" }
+// })
+const header__basket = document.createElement('div')
+header__basket.classList.add('header__basket')
 // 
 const header__container_nav_title = document.createElement('div')
 header__container_nav_title.classList.add('header__container_nav_title')
@@ -56,7 +64,7 @@ header__title_basket.textContent = 'Корзина'
 
 header__container.appendChild(header__logo)
 header__container.appendChild(header__searchInput)
-// header__container_nav_icons.appendChild(header__basket)
+header__container_nav_icons.appendChild(header__basket)
 
 header__container_nav_title.appendChild(header__title_basket)
 
