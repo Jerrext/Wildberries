@@ -1,7 +1,8 @@
 .slider {
   border-radius: 25px 25px 0 0;
   margin-top: -20px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
+  
 }
 
 .adaptivn-slayder{
@@ -12,6 +13,7 @@
   height: 400px;
   margin-bottom: 15px;
   border-radius: 25px;
+ 
 }
   
 .adaptivn-slayder .parag img {
@@ -21,10 +23,12 @@
   border: none !important;
   box-shadow: none !important;
   border-radius: 25px;
+  cursor: pointer;
+ 
 }
 
 .adaptivn-slayder .prev, .adaptivn-slayder .next {
-  
+  opacity: 0.7;
   cursor: pointer;
   position: absolute;
   transform: translateY(-50%);
@@ -35,16 +39,29 @@
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 50%;
+  border: none;
+  float: none;
+  z-index: 999999;
+}
+.adaptivn-slayder .prev{
+  margin-left: 15px;
+  border-bottom-color:#545557;
+  cursor: pointer;
 }
 .adaptivn-slayder .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 15px;
+  border-bottom-color:#545557;
+  cursor: pointer;
 }
 
 .adaptivn-slayder .prev:hover,
 .adaptivn-slayder .next:hover {
-  background-color: rgba(25, 24, 24, 0.8);
+  background-color: rgba(241, 217, 217, 0.829);
+  float: none;
 }
 
 
@@ -63,7 +80,7 @@
 }
 .deystvuyus,
 .point-kadr:hover {
-  background-color: #aaa;
+  background-color: rgb(185, 79, 141);
 }
 
 .adaptivn-slayder .parag {

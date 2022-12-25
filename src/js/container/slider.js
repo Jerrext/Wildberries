@@ -16,12 +16,12 @@ sliderContainer.appendChild(slayder)
 
 const prev = document.createElement('button')
 prev.classList.add('prev')
-prev.innerText="❮"
+prev.innerText="🡸"
 slayder.appendChild(prev)
 
 const next = document.createElement('button')
 next.classList.add('next')
-next.innerText="❯"
+next.innerText="🡺"
 slayder.appendChild(next)
 
 const kadr= document.createElement("div")
