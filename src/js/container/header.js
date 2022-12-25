@@ -1,3 +1,4 @@
+import { basketData } from "../store.js"
 import { createBtn } from "../utils/createBtn.js"
 import { createElem } from "../utils/createElem.js"
 
@@ -43,6 +44,7 @@ header__container_nav.addEventListener("click", (e) => {
 
 const header__container_nav_icons = document.createElement('div')
 header__container_nav_icons.classList.add('header__container_nav_icons')
+
 //
 export const basketWrapper = createElem("div", {
 	className: "basketWrapper",
@@ -56,6 +58,15 @@ export const basketWrapper = createElem("div", {
 // })
 const header__basket = document.createElement('div')
 header__basket.classList.add('header__basket')
+export const basketCounter = document.createElement('div')
+basketCounter.classList.add('basketCounter')
+export const counterCheck = () => {
+	if (basketData.length === 0) {
+		basketCounter.style.display = "none";
+	} else {
+		basketCounter.style.display = "block";
+	}
+}
 // 
 const header__container_nav_title = document.createElement('div')
 header__container_nav_title.classList.add('header__container_nav_title')
@@ -65,6 +76,7 @@ header__title_basket.textContent = 'Корзина'
 header__container.appendChild(header__logo)
 header__container.appendChild(header__searchInput)
 header__container_nav_icons.appendChild(header__basket)
+header__container_nav_icons.appendChild(basketCounter)
 
 header__container_nav_title.appendChild(header__title_basket)
 

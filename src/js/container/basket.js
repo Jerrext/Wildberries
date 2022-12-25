@@ -1,7 +1,8 @@
 import { basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
-import { basketWrapper } from "./header.js";
+import { basketWrapper, basketCounter, counterCheck } from "./header.js";
+
 const header = document.getElementById("header")
 
 // функция пересчета скидки
@@ -41,7 +42,8 @@ const deleteAllBasket = createBtn("Очистить корзину", "deleteAllB
 	}
 	discountPriceNum.innerText = `0 р`
 	getSumOverall.innerText = `0 р`
-
+	basketCounter.innerText = ``
+	counterCheck()
 })
 
 // наполнение wrapper корзины
