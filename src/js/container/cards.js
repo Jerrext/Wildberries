@@ -4,6 +4,7 @@ import { createElem } from "../utils/createElem.js";
 import { setItem } from "../utils/setLocalItems.js";
 import { itemWrapper, discountPriceNum, getSumOverall, discountRecalc } from "./basket.js";
 import { toggleSpinner } from "./spinner.js"
+import { basketCounter, counterCheck } from "./header.js";
 
 const main = document.getElementById("main")
 
@@ -60,7 +61,7 @@ const renderCard = (elem, to) => {
 	const addToBasket = createBtn("Добавить в корзину", "cards__basket-add-btn", discountBasketBtnWrapper, "click", () => {
 		basketData.push(elem)
 		setItem(basketData)
-        console.log(basketData)
+		console.log(basketData)
 		//
 		const itemDiv = createElem("div", {
 			className: "itemContainer",
@@ -83,8 +84,12 @@ const renderCard = (elem, to) => {
 			const deleteOneBlockIndex = deleteOneBlock.indexOf(id)
 			basketData.splice(deleteOneBlockIndex, 1)
 			discountRecalc()
+			basketCounter.innerText = basketData.length
+			counterCheck()
 		})
 		discountRecalc()
+		basketCounter.innerText = basketData.length
+		counterCheck()
 	})
 
 	//
@@ -106,16 +111,16 @@ const renderCard = (elem, to) => {
 }
 
 const cardData = () => {
-    toggleSpinner()
+	toggleSpinner()
 
-    return fetch("https://63a6f19159fd83b1bb3b0670.mockapi.io/cardData")
-        .then(response => response.json())
-        .then(data => {
-            toggleSpinner()
-            data.forEach(item => renderCard(item, cardsWrapper))
-            console.log(data)
-            return data
-        })
+	return fetch("https://63a6f19159fd83b1bb3b0670.mockapi.io/cardData")
+		.then(response => response.json())
+		.then(data => {
+			toggleSpinner()
+			data.forEach(item => renderCard(item, cardsWrapper))
+			console.log(data)
+			return data
+		})
 }
 
 cardData()
