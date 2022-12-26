@@ -50,12 +50,6 @@ export const basketWrapper = createElem("div", {
 	className: "basketWrapper",
 }, header__container)
 
-// const basket = createBtn("", "header__basket", header__container_nav_icons, "click", () => {
-// 	if (basketWrapper.style.display === "none") {
-// 		basketWrapper.style.display = "grid"
-// 		fieldOverlay.style.display = "block"
-// 	} else { basketWrapper.style.display = "none" }
-// })
 const header__basket = document.createElement('div')
 header__basket.classList.add('header__basket')
 export const basketCounter = document.createElement('div')
@@ -74,7 +68,12 @@ const header__title_basket = document.createElement('span')
 header__title_basket.textContent = 'Корзина'
 
 header__container.appendChild(header__logo)
-header__container.appendChild(header__searchInput)
+
+const searchContainer = createElem("div", {
+	className: "header__search-container",
+}, header__container)
+
+searchContainer.appendChild(header__searchInput)
 header__container_nav_icons.appendChild(header__basket)
 header__container_nav_icons.appendChild(basketCounter)
 
@@ -86,3 +85,84 @@ header__container.appendChild(header__container_nav)
 header.appendChild(headerContainer)
 headerContainer.appendChild(header__container)
 
+// Поиск
+
+const searchBtn = createElem("div", {
+	className: "header__search-btn",
+}, searchContainer)
+
+const searchClear = createElem("div", {
+	className: "header__search-clear",
+}, searchContainer)
+
+const searchFunc = () => {
+	let hiddenConter = 0
+	const slider = document.querySelector(".slider")
+	const nothingFound = document.querySelector(".cards__nothing-found")
+	const searchResult = document.querySelector(".cards__search-res")
+	const sectionTitle = document.querySelector(".cards__title")
+	const spinner = document.querySelector(".spinner-two")
+
+	spinner.style.display = "block"
+
+	setTimeout(() => {
+		spinner.style.display = "none"
+	}, 400)
+	
+	for (let item of document.querySelectorAll(".cards__thing")) {
+		if (!item.textContent.toLowerCase().includes(header__searchInput.value.toLowerCase())) {
+			item.parentElement.parentElement.hidden = true
+			hiddenConter++
+		} else {
+			item.parentElement.parentElement.hidden = false
+		}
+	}	
+
+	if (hiddenConter === document.querySelectorAll(".cards__thing").length) {
+		hiddenConter = 0
+		
+		searchResult.style.display = "block"
+		nothingFound.style.display = "block"
+		sectionTitle.style.display = "none"
+	} else {
+		hiddenConter = 0
+		
+		searchResult.style.display = "block"
+		nothingFound.style.display = "none"
+		sectionTitle.style.display = "none"
+	}
+
+	if (header__searchInput.value === "") {
+		slider.style.display = "block"
+		searchResult.style.display = ""
+		sectionTitle.style.display = ""
+	} else {
+		slider.style.display = "none"
+		searchResult.style.display = "block"
+	}
+}
+
+searchBtn.addEventListener("click", () => {
+	searchFunc()
+})
+
+header__searchInput.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) {
+		searchFunc()
+    }
+});
+
+// Очистка
+
+header__searchInput.addEventListener('input', (e) => {
+	if (e.target.value !== "") {
+		searchClear.style.display = "block"
+	} else {
+		searchClear.style.display = "none"
+	}
+})
+
+searchClear.addEventListener("click", () => {
+	header__searchInput.value = ""
+	searchClear.style.display = "none"
+})

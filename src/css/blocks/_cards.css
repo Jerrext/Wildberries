@@ -1,9 +1,33 @@
+.cards {
+    padding: 0 32px;
+}
+
+.cards__title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+.cards__search-res {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 40px;
+    display: none;
+}
+
+.cards__nothing-found {
+    font-size: 25px;
+    padding-top: 30px;
+    display: none;
+}
+
 .cards__wrapper {
     display: flex;
     flex-direction: row; 
     justify-content: space-between;  
     flex-wrap: wrap;
-    padding-top: 60px;
+    padding-top: 30px
+    
 }
 
 .cards__card-wrapper {                
