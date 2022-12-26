@@ -1,17 +1,24 @@
 function snow() {
-   
+    // const body = document.querySelector("body")
+    // const snowContainer = createElement("div")
+    // body.appendChild(snowContainer)
+
     let flake = document.createElement('div');
     flake.innerHTML = '❆';
-    flake.style.cssText = 'position:absolute;color:#fff;';
+    flake.style.cssText = 'position:fixed;color:#fff;';
+    // snowContainer.appendChild(flake)
+    const main = document.getElementById("main")
 
     // Получаем высоту страницы, которая эквивалентна положению оси Y при падении снежинок
     let documentHieght = window.innerHeight;
     // Получаем ширину страницы, используем это число для вычисления, значение слева, когда снежинка начинается
-    let documentWidth = window.innerWidth;
+    
+    let documentWidth = main.offsetWidth
 
     let millisec = 100;
     //  установливаем первый таймер, периодический таймер и каждый раз генерировать снежинку (миллисекунды);
     setInterval(function() { // После загрузки страницы таймер начинает работать
+        let documentWidth = main.offsetWidth
         // Произвольно генерируем значение left в начале падения снежинки, что эквивалентно положению оси X в начале
         let startLeft = Math.random() * documentWidth;
 
@@ -32,6 +39,7 @@ function snow() {
 
         // Клонируем шаблон снежинки
         let cloneFlake = flake.cloneNode(true);
+        console.log(cloneFlake)
 
         // Изменяем стиль впервые, определяем стиль клонированной снежинки
         cloneFlake.style.cssText += `
@@ -39,7 +47,7 @@ function snow() {
                 opacity: ${startOpacity};
                 font-size:${flakeSize}px;
                 top:-25px;
-                    transition:${durationTime}ms;
+                transition:${durationTime}ms;
             `;
 
         
@@ -48,6 +56,7 @@ function snow() {
         // Устанавливаем второй таймер, одноразовый таймер,
         // Когда первый таймер генерирует снежинки и отображает их на странице, измените стиль снежинок, чтобы они двигались;
         setTimeout(function() {
+            
             // Изменяем стиль во второй раз
             cloneFlake.style.cssText += `
                         left: ${endLeft}px;
