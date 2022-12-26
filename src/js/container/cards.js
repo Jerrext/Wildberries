@@ -8,6 +8,8 @@ import { basketCounter, counterCheck } from "./header.js";
 
 const main = document.getElementById("main")
 
+console.log(main.offsetWidth)
+
 const cards = createElem("section", {
 	className: "cards"
 }, main)
