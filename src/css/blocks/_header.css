@@ -16,7 +16,6 @@
 }
 .header__logo {
     min-width: 270px;
-    height: 57px;
     background-image: url(../../img/header_logo.png);
     background-size: cover;
     background-position: center;
@@ -132,4 +131,20 @@
 
 .header__container_nav:hover {
     opacity: 1;
+}
+
+/* */
+
+@media screen and (max-width: 950px) {
+    .header {
+        height: 70px;
+    }
+
+    .header__container {
+        top: 5px;
+    }
+
+    .header__logo {
+        transform: scale(.6) translateX(-100px);
+    }
 }
