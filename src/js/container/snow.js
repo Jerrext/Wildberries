@@ -39,7 +39,6 @@ function snow() {
 
         // Клонируем шаблон снежинки
         let cloneFlake = flake.cloneNode(true);
-        console.log(cloneFlake)
 
         // Изменяем стиль впервые, определяем стиль клонированной снежинки
         cloneFlake.style.cssText += `

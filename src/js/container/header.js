@@ -1,5 +1,6 @@
 import { basketData } from "../store.js"
 import { createBtn } from "../utils/createBtn.js"
+import { searchFunc } from "../utils/search.js"
 import { createElem } from "../utils/createElem.js"
 
 const header = document.getElementById('header')
@@ -81,6 +82,16 @@ header__container_nav_title.appendChild(header__title_basket)
 
 header__container_nav.appendChild(header__container_nav_icons)
 header__container_nav.appendChild(header__container_nav_title)
+
+const searchAdaptebleBtn = createElem("div", {
+	className: "header__search-adapteble-btn"
+}, header__container)
+
+const searchCancle = createElem("div", {
+	className: "header__search-cancel-btn",
+	textContent: "Отменить"
+}, header__container)
+
 header__container.appendChild(header__container_nav)
 header.appendChild(headerContainer)
 headerContainer.appendChild(header__container)
@@ -94,53 +105,6 @@ const searchBtn = createElem("div", {
 const searchClear = createElem("div", {
 	className: "header__search-clear",
 }, searchContainer)
-
-const searchFunc = () => {
-	let hiddenConter = 0
-	const slider = document.querySelector(".slider")
-	const nothingFound = document.querySelector(".cards__nothing-found")
-	const searchResult = document.querySelector(".cards__search-res")
-	const sectionTitle = document.querySelector(".cards__title")
-	const spinner = document.querySelector(".spinner-two")
-
-	spinner.style.display = "block"
-
-	setTimeout(() => {
-		spinner.style.display = "none"
-	}, 400)
-	
-	for (let item of document.querySelectorAll(".cards__thing")) {
-		if (!item.textContent.toLowerCase().includes(header__searchInput.value.toLowerCase())) {
-			item.parentElement.parentElement.hidden = true
-			hiddenConter++
-		} else {
-			item.parentElement.parentElement.hidden = false
-		}
-	}	
-
-	if (hiddenConter === document.querySelectorAll(".cards__thing").length) {
-		hiddenConter = 0
-		
-		searchResult.style.display = "block"
-		nothingFound.style.display = "block"
-		sectionTitle.style.display = "none"
-	} else {
-		hiddenConter = 0
-		
-		searchResult.style.display = "block"
-		nothingFound.style.display = "none"
-		sectionTitle.style.display = "none"
-	}
-
-	if (header__searchInput.value === "") {
-		slider.style.display = "block"
-		searchResult.style.display = ""
-		sectionTitle.style.display = ""
-	} else {
-		slider.style.display = "none"
-		searchResult.style.display = "block"
-	}
-}
 
 searchBtn.addEventListener("click", () => {
 	searchFunc()
@@ -165,4 +129,22 @@ header__searchInput.addEventListener('input', (e) => {
 searchClear.addEventListener("click", () => {
 	header__searchInput.value = ""
 	searchClear.style.display = "none"
+})
+
+// Адаптив
+
+searchAdaptebleBtn.addEventListener("click", () => {
+	searchContainer.style.display = "block"
+	searchCancle.style.display = "block"
+	header__logo.style.display = "none"
+	searchAdaptebleBtn.style.display = "none"
+	header__container_nav.style.display = "none"
+})
+
+searchCancle.addEventListener("click", () => {
+	searchContainer.style.display = ""
+	searchCancle.style.display = ""
+	header__logo.style.display = ""
+	searchAdaptebleBtn.style.display = ""
+	header__container_nav.style.display = ""
 })

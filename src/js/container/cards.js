@@ -8,8 +8,6 @@ import { basketCounter, counterCheck } from "./header.js";
 
 const main = document.getElementById("main")
 
-console.log(main.offsetWidth)
-
 const cards = createElem("section", {
 	className: "cards"
 }, main)
@@ -135,7 +133,6 @@ const cardData = () => {
 		.then(data => {
 			toggleSpinner()
 			data.forEach(item => renderCard(item, cardsWrapper))
-			console.log(data)
 			return data
 		})
 }
