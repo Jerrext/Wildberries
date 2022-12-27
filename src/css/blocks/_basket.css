@@ -1,22 +1,8 @@
-/* .basket-main{
-	cursor: pointer;
-	margin: 0;
-	padding: 0;
-	background: url("../../img/cart.png") no-repeat 0 0;
-	height:60px;
-	width: 60px;
-	border:0;
-	transition: all 0.3s;
-}
-.basket-main:hover{
-	scale: 1.1;
-} */
-
 .basketTopWrapper{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-padding: 20px 10px;
+	padding: 20px 10px;
 }
 .basketTopText{
 	width: 80px;
@@ -47,17 +33,18 @@ padding: 20px 10px;
 	border-radius: 10px;
 	padding: 50px 50px;
 	position: fixed;
-	top:120px ;
-	right: 100px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
 	background: white;
 	z-index: 150;
 }
 
-.itemWrapper{
-justify-content: space-around;
-overflow: auto;
-max-height: 400px;
-height: 100%;
+.itemWrapper {
+	justify-content: space-around;
+	overflow: auto;
+	max-height: 400px;
+	height: 100%;
 }
 
 .itemContainer{
@@ -114,8 +101,8 @@ justify-content: flex-end;
 .totalPriceWrapper{
 	display: flex;
 	margin-top: 20px;
-grid-template-columns: 1fr 1fr;
-justify-content: flex-end;
+	grid-template-columns: 1fr 1fr;
+	justify-content: flex-end;
 }
 .totalPriceWrapper>p{
 	margin-right: 20px;
@@ -148,7 +135,7 @@ justify-content: flex-end;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: 9;
+	z-index: 120;
 }
 
 /* scrollbar */
