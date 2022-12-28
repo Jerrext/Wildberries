@@ -130,7 +130,7 @@
 
 .cards__thing {
     font-size: 25px;
-    line-height: 20px;
+    line-height: 27px;
     color: #999;
     position: relative;
     padding-top: 5px;
@@ -171,7 +171,7 @@
         width: 105px;
         height: 30px;
         font-size: 10px;
-        margin-right: 20px;
+        margin-right: 10px;
     }
 
     .cards__card-wrapper-top {
@@ -270,6 +270,22 @@
 
     .cards__thing {
         font-size: 15px;
+        line-height: 20px;
+    }
+    .cards__discount-percent {
+        font-size: 16px;
+    }
+
+    .cards__card-wrapper-top {
+        margin-bottom: 40px;
+    }
+
+    .cards__discount-price {
+        font-size: 15px;
+    }
+
+    .cards__actual-price {
+        font-size: 14px;
     }
 }
 
@@ -305,20 +321,8 @@
         transform: translate(-35%, 30%);
     }
 
-    .cards__discount-percent {
-        font-size: 16px;
-    }
-
     .cards__card-wrapper-top {
         margin-bottom: 40px;
-    }
-
-    .cards__discount-price {
-        font-size: 15px;
-    }
-
-    .cards__actual-price {
-    font-size: 14px;
     }
 }
 
@@ -500,7 +504,7 @@
     }
     
     .cards__basket-add-btn {
-        width: 230px;
+        width: 210px;
         height: 50px;
         margin-top: -20px;
         font-size: 18px;

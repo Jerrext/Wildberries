@@ -89,8 +89,8 @@
 .discountWrapper{
 	display: flex;
 	margin-top: 20px;
-grid-template-columns: 1fr 1fr;
-justify-content: flex-end;
+	grid-template-columns: 1fr 1fr;
+	justify-content: flex-end;
 
 }
 .discountWrapper>.Discount{
