@@ -322,39 +322,6 @@
     }
 }
 
-@media only screen and (max-width:926px) {
-    .cards__card-wrapper-top {
-        width: 140px;
-        height: 220px;
-    }
-
-    .cards__card-wrapper {
-        width: 100%;
-        flex-basis: 190px;
-        margin-bottom: 40px;
-    }
-
-    .cards__card-wrapper-bottom {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 70%;
-        padding-left: 0px;
-        gap: 0px;
-    }
-
-    .cards__discount-basket-wrapper {
-        display: flex;
-        gap: 20px;
-        transform: translate(10%, -200%);
-    }
-
-    .cards__discount-percent {
-        font-size: 16px;
-    }
-}
-
 @media only screen and (max-width:902px) {
     .cards__discount-basket-wrapper {
         height: 24px;
@@ -420,16 +387,24 @@
 }
 
 @media only screen and (max-width:742px) {
+    .cards {
+        padding: 0 20px;
+    }
+    .cards__wrapper {
+        justify-content: space-evenly;
+    }
+
     .cards__img {
         height: 350px;
-        width: 325px;    }
+        width: 255px;    
+    }
 
     .cards__quick-view-btn {
-        width: 300px;
+        width: 205px;
         height: 50px;
         font-size: 17px;
         border-radius: 20px;
-        transform: translate(-35%, -50%);
+        transform: translate(-50%, -50%);
     }
 
     .cards__discount-percent {
@@ -455,7 +430,7 @@
     }
 
     .cards__card-wrapper-top {
-        width: 240px;
+        width: 255px;
         height: 320px;
     }
 
@@ -476,44 +451,89 @@
     }
 
     .cards__discount-basket-wrapper {
-        width: 281px;
+        width: 201px;
         height: 20px;
         display: flex;
         justify-content: space-between;
     }
 }
 
-@media only screen and (max-width:634px)  {
-    .cards__img {
-        height: 330px;
-        width: 315px;  
+@media only screen and (max-width:634px) {
+    .cards__card-wrapper {
+        flex-basis: 100%;
+        margin-bottom: 60px;
     }
 
-@media only screen and (max-width:634px) {
+    .cards__card-wrapper-top {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
     .cards__img {
-        height: 310px;
-        width: 295px;  
+        width: 100%;
+        height: 100%;
     }
 
     .cards__quick-view-btn {
-        width: 239px;
+        max-width: 350px;
+        width: 100%;
+        height: 70px;
+        font-size: 22px;
+        border-radius: 50px;
+    }
+
+    .cards__discount-basket-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cards__discount-percent {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .cards__basket-add-btn {
+        width: 230px;
         height: 50px;
-        font-size: 15px;
+        margin-top: -20px;
+        font-size: 18px;
+        border-radius: 10px;
     }
 
-@media only screen and (max-width:612px) {
-    .cards__img {
-        height: 320px;
-        width: 275px;  
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
     }
 
-cards__basket-add-btn {
-    width: 204px;
-    height: 41px;
-    font-size: 13px;
-    transform: translate(-40%, -60%);
+    .cards__discount-price {
+        font-size: 30px;
     }
-}
 
-}
+    .cards__actual-price {
+        font-size: 27px;
+        margin-left: 20px;
+    }
+
+    .cards__thing {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    .cards__title {
+        font-size: 35px;
+        font-weight: bold;
+        padding-top: 40px;
+    }
 }
