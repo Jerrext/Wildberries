@@ -3,7 +3,8 @@
 }
 
 .cards__title {
-    font-size: 30px;
+    font-family: "Segoe UI";
+    font-size: 24px;
     font-weight: bold;
     padding-top: 40px;
 }
@@ -87,8 +88,9 @@
 }
 
 .cards__discount-percent {
+    font-family: "Segoe UI";
     color: #cb11ab;
-    font-size: 35px;
+    font-size: 14px;
     line-height: 20px;
     background-color: #fdeef9;
     font-weight: 700;

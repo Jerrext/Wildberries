@@ -94,8 +94,10 @@ justify-content: flex-end;
 
 }
 .discountWrapper>.Discount{
+    font-family: "Segoe UI";
 	margin-right: 20px;
-	font-size: 20px;
+	font-size: 14px;
+    font-weight: 700;
 	
 }
 .totalPriceWrapper{

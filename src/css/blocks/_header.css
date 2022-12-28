@@ -1,4 +1,3 @@
-
 .header {
     width: 100%;
     background-image: url(../../img/header_background.jpg);
@@ -109,14 +108,15 @@
     margin-left: 10px;
 }
 .header__container_nav_title {
+    font-family: "Segoe UI";
     height: 30px;
     display: flex;
     justify-content: space-between;
-    font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
     font-size: 14px;
     color: rgb(255, 255, 255);
 }
 .header__basket {
+    font-family: "Segoe UI";
 	cursor: pointer;
     width: 27px;
     height: 27px;
