@@ -75,6 +75,7 @@ const renderCard = (elem, to) => {
 	}, cardWrapperTop)
 
 	const quickView = createBtn("Быстрый просмотр", "cards__quick-view-btn", cardWrapperTop, "click", () => {
+		document.body.style.overflow = "hidden"
 		quickViewBtnHandler(elem)
 	})
 

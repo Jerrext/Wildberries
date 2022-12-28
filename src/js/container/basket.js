@@ -24,10 +24,24 @@ export const discountRecalc = () => {
 const basketTopWrapper = createElem("div", {
 	className: "basketTopWrapper",
 }, basketWrapper)
+
+const basketClose = createElem("div", {
+	className: "basketClose",
+}, basketWrapper)
+
+const fieldOverlay = document.querySelector(".fieldOverlay")
+
+basketClose.addEventListener("click", () => {
+	document.body.style.overflow = "auto"
+	fieldOverlay.style.display = "none"
+	basketWrapper.style.display = "none"
+})
+
 const basketTopText = createElem("span", {
 	className: "basketTopText",
 	innerText: "Корзина"
 }, basketTopWrapper)
+
 basketWrapper.style.display = "none"
 
 export const delList = () => document.querySelectorAll(".itemContainer")
