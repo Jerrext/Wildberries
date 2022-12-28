@@ -2,6 +2,7 @@ import { basketData } from "../store.js";
 import { createBtn } from "../utils/createBtn.js";
 import { createElem } from "../utils/createElem.js";
 import { basketWrapper, basketCounter, counterCheck } from "./header.js";
+import { setItem } from "../utils/setLocalItems.js";
 
 const header = document.getElementById("header")
 
@@ -40,6 +41,7 @@ const deleteAllBasket = createBtn("Очистить корзину", "deleteAllB
 			i--
 		}
 	}
+	setItem(basketData)
 	discountPriceNum.innerText = `0 р`
 	getSumOverall.innerText = `0 р`
 	basketCounter.innerText = ``

@@ -36,11 +36,13 @@ fieldOverlay.addEventListener("click", (e) => {
 //
 const header__container_nav = document.createElement('div')
 header__container_nav.classList.add('header__container_nav')
-header__container_nav.addEventListener("click", (e) => {
+header__container_nav.addEventListener("click", () => {
 	if (basketWrapper.style.display === "none") {
 		basketWrapper.style.display = "grid"
 		fieldOverlay.style.display = "block"
-	} else { basketWrapper.style.display = "none" }
+	} else { 
+		basketWrapper.style.display = "none" 
+	}
 })
 
 const header__container_nav_icons = document.createElement('div')
