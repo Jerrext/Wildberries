@@ -108,7 +108,6 @@
     margin-left: 10px;
 }
 .header__container_nav_title {
-    font-family: "Segoe UI";
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -116,7 +115,6 @@
     color: rgb(255, 255, 255);
 }
 .header__basket {
-    font-family: "Segoe UI";
 	cursor: pointer;
     width: 27px;
     height: 27px;

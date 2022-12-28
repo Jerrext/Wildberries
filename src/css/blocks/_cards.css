@@ -3,11 +3,10 @@
 }
 
 .cards__title {
-    font-family: "Segoe UI";
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
     padding-top: 40px;
-} 
+}
 
 .cards__search-res {
     font-size: 30px;
@@ -88,9 +87,8 @@
 }
 
 .cards__discount-percent {
-    font-family: "Segoe UI";
     color: #cb11ab;
-    font-size: 14px;
+    font-size: 30px;
     line-height: 20px;
     background-color: #fdeef9;
     font-weight: 700;
@@ -100,10 +98,8 @@
 }
 
 .cards__discount-price {
-    font-family: "Segoe UI";
-    font-size: 18px;
-    text-size-adjust: 100%;
-    line-height: 24px;
+    font-size: 25px;
+    line-height: 20px;
     font-weight: 700;
     color: #242424;
     text-decoration: none;
@@ -113,8 +109,7 @@
 }
 
 .cards__actual-price {
-    font-family: "Segoe UI";
-    font-size: 14px;
+    font-size: 25px;
     color: #999;
     text-decoration: line-through;
     max-width: 100%;
@@ -134,10 +129,415 @@
 } 
 
 .cards__thing {
-    font-family: "Segoe UI";
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 25px;
+    line-height: 27px;
     color: #999;
     position: relative;
     padding-top: 5px;
+}
+
+@media only screen and (max-width:1460px) {
+    .cards__img {
+        height: 302px;
+        width: 215px;
+        border-radius: 14px;
+    }
+
+    .cards__quick-view-btn {
+        width: 155px;
+        height: 40px;
+        font-size: 12px;
+        transform: translate(-55%, -50%);
+    }
+
+    .cards__discount-percent {
+        font-size: 18px;
+        align-self: center;
+    }
+
+    .cards__discount-price {
+        font-size: 18px;
+    }
+
+    .cards__actual-price {
+        font-size: 18px;
+    }
+
+    .cards__thing {
+        font-size: 18px;
+    }
+
+    .cards__basket-add-btn {
+        width: 105px;
+        height: 30px;
+        font-size: 10px;
+        margin-right: 10px;
+    }
+
+    .cards__card-wrapper-top {
+        width: 240px;
+        height: 320px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 245px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+}
+}
+
+@media only screen and (max-width:1040px) {
+    .cards__card-wrapper-top {
+        width: 220px;
+        height: 300px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 230px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__quick-view-btn {
+        transform: translate(-50%, -50%);
+    }
+
+    .cards__discount-basket-wrapper {
+        transform: translate(5%, -200%);
+    }
+
+    .cards__card-wrapper-top {
+        width: 220px;
+        height: 316px;
+    }
+}
+
+@media only screen and (max-width:982px) {
+    .cards__card-wrapper-top {
+        width: 200px;
+        height: 280px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 210px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__discount-basket-wrapper {
+        display: flex;
+        gap: 20px;
+        transform: translate(10%, -200%);
+    }
+
+    .cards__quick-view-btn {
+        transform: translate(-43%, -50%);
+    }
+
+    .cards__card-wrapper-top {
+        margin-bottom: 30px;
+    }
+
+    .cards__thing {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .cards__discount-percent {
+        font-size: 16px;
+    }
+
+    .cards__card-wrapper-top {
+        margin-bottom: 40px;
+    }
+
+    .cards__discount-price {
+        font-size: 15px;
+    }
+
+    .cards__actual-price {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:962px) {
+    .cards__card-wrapper-top {
+        width: 180px;
+        height: 260px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 190px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__discount-basket-wrapper {
+        display: flex;
+        gap: 20px;
+        transform: translate(10%, -200%);
+    }
+
+    .cards__quick-view-btn {
+        transform: translate(-35%, 30%);
+    }
+
+    .cards__card-wrapper-top {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width:902px) {
+    .cards__discount-basket-wrapper {
+        height: 24px;
+    }
+
+    .cards__quick-view-btn {
+        transform: translate(-40%, 30%);
+        width: 137px;
+        height: 27px;
+    }
+
+    .cards__discount-percent {
+        font-size: 10px;
+        align-self: flex-start;
+    }
+
+    .cards__img {
+        height: 242px;
+        width: 170px;
+    }
+
+    .cards__basket-add-btn {
+        width: 97px;
+        height: 25px;
+        font-size: 8px;
+    }
+
+    .cards__discount-basket-wrapper {
+        width: 158px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-width:902px) {
+    .cards__card-wrapper-top {
+        width: 120px;
+        height: 200px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 170px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__card-wrapper-bottom {
+        width: 100%;
+    }
+
+    .cards__quick-view-btn {
+        transform: translate(-30%, 30%);
+    }
+}
+
+@media only screen and (max-width:742px) {
+    .cards {
+        padding: 0 20px;
+    }
+    .cards__wrapper {
+        justify-content: space-evenly;
+    }
+
+    .cards__img {
+        height: 350px;
+        width: 255px;    
+    }
+
+    .cards__quick-view-btn {
+        width: 205px;
+        height: 50px;
+        font-size: 17px;
+        border-radius: 20px;
+        transform: translate(-50%, -50%);
+    }
+
+    .cards__discount-percent {
+        font-size: 18px;
+    }
+
+    .cards__discount-price {
+        font-size: 18px;
+    }
+
+    .cards__actual-price {
+        font-size: 18px;
+    }
+
+    .cards__thing {
+        font-size: 18px;
+    }
+
+    .cards__basket-add-btn {
+        width: 129px;
+        height: 31px;
+        font-size: 12px;
+    }
+
+    .cards__card-wrapper-top {
+        width: 255px;
+        height: 320px;
+    }
+
+    .cards__card-wrapper {
+        width: 100%;
+        flex-basis: 240px;
+        margin-bottom: 40px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__discount-basket-wrapper {
+        width: 201px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width:634px) {
+    .cards__card-wrapper {
+        flex-basis: 100%;
+        margin-bottom: 60px;
+    }
+
+    .cards__card-wrapper-top {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    .cards__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cards__quick-view-btn {
+        max-width: 350px;
+        width: 100%;
+        height: 70px;
+        font-size: 22px;
+        border-radius: 50px;
+    }
+
+    .cards__discount-basket-wrapper {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cards__discount-percent {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .cards__basket-add-btn {
+        width: 210px;
+        height: 50px;
+        margin-top: -20px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .cards__card-wrapper-bottom {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 70%;
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    .cards__discount-price {
+        font-size: 30px;
+    }
+
+    .cards__actual-price {
+        font-size: 27px;
+        margin-left: 20px;
+    }
+
+    .cards__thing {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+
+    .cards__title {
+        font-size: 35px;
+        font-weight: bold;
+        padding-top: 40px;
+    }
 }

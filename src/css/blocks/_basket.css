@@ -89,15 +89,13 @@
 .discountWrapper{
 	display: flex;
 	margin-top: 20px;
-grid-template-columns: 1fr 1fr;
-justify-content: flex-end;
+	grid-template-columns: 1fr 1fr;
+	justify-content: flex-end;
 
 }
 .discountWrapper>.Discount{
-    font-family: "Segoe UI";
 	margin-right: 20px;
-	font-size: 14px;
-    font-weight: 700;
+	font-size: 20px;
 	
 }
 .totalPriceWrapper{
