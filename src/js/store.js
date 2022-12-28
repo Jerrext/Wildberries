@@ -2,7 +2,7 @@
 
 export { basketData, images}
 
-const basketData = []
+let basketData = []
 
 const images = [
     'https://images.wbstatic.net/bners1/big_new__22.jpg',
@@ -11,3 +11,9 @@ const images = [
     'https://images.wbstatic.net/bners1/big_toys.jpg',
     'https://images.wbstatic.net/bners1/big_inditexx_14_11_22.jpg',
 ]
+
+if (localStorage.getItem("basket") === null) {
+    localStorage.setItem("basket", JSON.stringify(basketData))
+}
+
+basketData = JSON.parse(localStorage.getItem("basket"))
