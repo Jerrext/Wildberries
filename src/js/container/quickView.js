@@ -10,6 +10,7 @@ const quickVieDescwWrapper = document.querySelector(".quick-view__description")
 
 const popUpClose = (elem) => {
     elem.style.display = "none"
+    document.body.style.overflow = "auto"
     for (let item of [...quickViewImgWrapper.children]) {
         item.remove()
     }
@@ -65,11 +66,13 @@ export const quickViewBtnHandler = (elem) => {
 	})
 
     cardImg.addEventListener("mousemove", (e) => {
-        let posX = -e.offsetX + "px"
-        let posY = -e.offsetY + "px"
-        cardImg.style.objectPosition = `${posX} ${posY}`;
-        cardImg.style.width = "200%"
-        cardImg.style.height = "200%"
+        if (window.innerWidth > 930) {
+            let posX = -e.offsetX + "px"
+            let posY = -e.offsetY + "px"
+            cardImg.style.objectPosition = `${posX} ${posY}`;
+            cardImg.style.width = "200%"
+            cardImg.style.height = "200%"
+        }
     })
 
     cardImg.addEventListener("mouseout", () => {

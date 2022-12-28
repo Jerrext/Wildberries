@@ -13,7 +13,8 @@
 
 .quick-view__wrapper {
     max-width: 800px;
-    height: 800px;
+    max-height: 800px;
+    height: 100%;
     width: 100%;
     position: fixed;
     left: 50%;
@@ -71,6 +72,7 @@
     height: 100%;
     object-fit: cover;
     cursor: zoom-in;
+    object-position: center center;
 }
 
 .quick-view__description {

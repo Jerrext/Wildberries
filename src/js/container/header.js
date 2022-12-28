@@ -29,6 +29,7 @@ const fieldOverlay = createElem("div", {
 fieldOverlay.style.display = "none"
 fieldOverlay.addEventListener("click", (e) => {
 	if (e.currentTarget.className === "fieldOverlay") {
+		document.body.style.overflow = "auto"
 		fieldOverlay.style.display = "none"
 		basketWrapper.style.display = "none"
 	}
@@ -37,6 +38,7 @@ fieldOverlay.addEventListener("click", (e) => {
 const header__container_nav = document.createElement('div')
 header__container_nav.classList.add('header__container_nav')
 header__container_nav.addEventListener("click", () => {
+	document.body.style.overflow = "hidden"
 	if (basketWrapper.style.display === "none") {
 		basketWrapper.style.display = "grid"
 		fieldOverlay.style.display = "block"
