@@ -98,8 +98,10 @@
 }
 
 .cards__discount-price {
-    font-size: 40px;
-    line-height: 20px;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    text-size-adjust: 100%;
+    line-height: 24px;
     font-weight: 700;
     color: #242424;
     text-decoration: none;
@@ -109,7 +111,8 @@
 }
 
 .cards__actual-price {
-    font-size: 30px;
+    font-family: "Segoe UI";
+    font-size: 14px;
     color: #999;
     text-decoration: line-through;
     max-width: 100%;
@@ -129,7 +132,8 @@
 } 
 
 .cards__thing {
-    font-size: 30px;
+    font-family: "Segoe UI";
+    font-size: 14px;
     line-height: 20px;
     color: #999;
     position: relative;
