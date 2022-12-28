@@ -1,5 +1,4 @@
 
-import { basketData } from "../store.js";
 import { createElem } from "../utils/createElem.js";
 import { cardData } from "../utils/renderItems.js";
 
