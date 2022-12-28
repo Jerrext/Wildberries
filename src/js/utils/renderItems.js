@@ -6,8 +6,9 @@ import { itemWrapper, discountRecalc } from "../container/basket.js";
 import { toggleSpinner } from "../container/spinner.js"
 import { basketCounter, counterCheck } from "../container/header.js";
 import { cardsWrapper } from "../container/cards.js";
+import { quickViewBtnHandler } from "../container/quickView.js";
 
-const renderBasket = (elem) => {
+export const renderBasket = (elem) => {
     setItem(basketData)
     
 	const { id, imgSrc, price, discount, thing } = elem
@@ -74,7 +75,7 @@ const renderCard = (elem, to) => {
 	}, cardWrapperTop)
 
 	const quickView = createBtn("Быстрый просмотр", "cards__quick-view-btn", cardWrapperTop, "click", () => {
-
+		quickViewBtnHandler(elem)
 	})
 
 	const discountBasketBtnWrapper = createElem("div", {
@@ -88,8 +89,6 @@ const renderCard = (elem, to) => {
 
 	const addToBasket = createBtn("Добавить в корзину", "cards__basket-add-btn", discountBasketBtnWrapper, "click", () => {
         basketData.push(elem)
-
-		//
 		renderBasket(elem)
 	})
 
