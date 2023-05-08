@@ -1,14 +1,14 @@
 .container {
-    max-width: 1504px;
-    margin: 0 auto;
-    width: 100%;
+max-width: 1504px;
+margin: 0 auto;
+width: 100%;
 }
 
 body {
-    background-color: #fff;
-    font-family: "Segoe UI", sans-serif;
+background-color: #fff;
+font-family: "Segoe UI", sans-serif;
 }
 
 .main {
-    position: relative;
+position: relative;
 }

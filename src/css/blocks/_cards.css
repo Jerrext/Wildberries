@@ -1,137 +1,137 @@
 .cards {
-    padding: 0 32px;
+padding: 0 32px;
 }
 
 .cards__title {
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 40px;
+font-size: 30px;
+font-weight: bold;
+padding-top: 40px;
 }
 
 .cards__search-res {
-    font-size: 30px;
-    font-weight: bold;
-    padding-top: 40px;
-    display: none;
+font-size: 30px;
+font-weight: bold;
+padding-top: 40px;
+display: none;
 }
 
 .cards__nothing-found {
-    font-size: 25px;
-    padding-top: 30px;
-    display: none;
+font-size: 25px;
+padding-top: 30px;
+display: none;
 }
 
 .cards__wrapper {
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between;  
-    flex-wrap: wrap;
-    padding-top: 30px
-    
+display: flex;
+flex-direction: row; 
+justify-content: space-between;  
+flex-wrap: wrap;
+padding-top: 30px
+
 }
 
-.cards__card-wrapper {                
-    width: 600px;
-    flex-basis: 350px;
-    margin-bottom: 40px;
+.cards__card-wrapper {
+width: 600px;
+flex-basis: 350px;
+margin-bottom: 40px;
 }
 
-.cards__card-wrapper-top {            
-    position: relative;
+.cards__card-wrapper-top {
+position: relative;
 }
 
 .cards__img {
-    object-fit: cover;                     
-    height: 450px;
-    width: 350px;
-    border-radius: 30px;
+object-fit: cover; 
+height: 450px;
+width: 350px;
+border-radius: 30px;
 }
 
 .cards__quick-view-btn {
-    width: 310px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 20px;
-    position: absolute;
-    left: 50%;                          
-    top: 50%;                          
-    transform: translate(-50%, -50%);   
-    cursor: pointer;
-    border: none;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: .5s;                  
+width: 310px;
+height: 50px;
+font-size: 20px;
+border-radius: 20px;
+position: absolute;
+left: 50%;  
+top: 50%;  
+transform: translate(-50%, -50%);   
+cursor: pointer;
+border: none;
+box-sizing: border-box;
+opacity: 0;
+transition: .5s;  
 }
 
-.cards__card-wrapper:hover .cards__quick-view-btn,         
-.cards__card-wrapper:hover .cards__basket-add-btn {         
-    opacity: 100;
+.cards__card-wrapper:hover .cards__quick-view-btn, 
+.cards__card-wrapper:hover .cards__basket-add-btn { 
+opacity: 100;
 }
 
 .cards__card-wrapper-bottom {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 70%;                                         
-    padding-left: 10px;
-    gap: 10px;
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+justify-content: flex-start;
+width: 70%; 
+padding-left: 10px;
+gap: 10px;
 }
 
 .cards__discount-basket-wrapper{
-    display: flex;
-    gap: 29px;
-    transform: translate(0%, -200%);
-    justify-content: space-evenly;
-    height: 30px;
+display: flex;
+gap: 29px;
+transform: translate(0%, -200%);
+justify-content: space-evenly;
+height: 30px;
 }
 
 .cards__discount-percent {
-    color: #cb11ab;
-    font-size: 30px;
-    line-height: 20px;
-    background-color: #fdeef9;
-    font-weight: 700;
-    max-width: 80%;
-    border-radius: 20px;
-    align-self: flex-end;
+color: #cb11ab;
+font-size: 30px;
+line-height: 20px;
+background-color: #fdeef9;
+font-weight: 700;
+max-width: 80%;
+border-radius: 20px;
+align-self: flex-end;
 }
 
 .cards__discount-price {
-    font-size: 25px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #242424;
-    text-decoration: none;
-    max-width: 100%;
-    line-height: 24px;
-    margin-right: 10px;
+font-size: 25px;
+line-height: 20px;
+font-weight: 700;
+color: #242424;
+text-decoration: none;
+max-width: 100%;
+line-height: 24px;
+margin-right: 10px;
 }
 
 .cards__actual-price {
-    font-size: 25px;
-    color: #999;
-    text-decoration: line-through;
-    max-width: 100%;
+font-size: 25px;
+color: #999;
+text-decoration: line-through;
+max-width: 100%;
 }
 
 .cards__basket-add-btn {
-    font-size: 17px;
-    cursor: pointer;
-    border: 2px solid #cb11ab;
-    width: 170px;
-    height: 43px;
-    color: #ffff;
-    background-color: #cb11ab;
-    border-radius: 5px;
-    opacity: 0;                      
-    transition: .5s;                 
+font-size: 17px;
+cursor: pointer;
+border: 2px solid #cb11ab;
+width: 170px;
+height: 43px;
+color: #ffff;
+background-color: #cb11ab;
+border-radius: 5px;
+opacity: 0;  
+transition: .5s; 
 } 
 
 .cards__thing {
-    font-size: 25px;
-    line-height: 27px;
-    color: #999;
-    position: relative;
-    padding-top: 5px;
+font-size: 25px;
+line-height: 27px;
+color: #999;
+position: relative;
+padding-top: 5px;
 }
