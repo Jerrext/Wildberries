@@ -87,38 +87,38 @@
 }
 
 .basketClose {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    width: 30px;
-    height: 30px;
-    opacity: .3;
-    transition: .3s;
-    cursor: pointer;
-    z-index: 300;
+position: absolute;
+right: 10px;
+top: 5px;
+width: 30px;
+height: 30px;
+opacity: .3;
+transition: .3s;
+cursor: pointer;
+z-index: 300;
 }
 
 .basketClose::after,
 .basketClose::before {
-    position: absolute;
-    content: '';
-    height: 2px;
-    left: 5px;
-    top: 14px;
-    width: 20px;
-    background-color: #000;
+position: absolute;
+content: '';
+height: 2px;
+left: 5px;
+top: 14px;
+width: 20px;
+background-color: #000;
 }
 
 .basketClose::after {
-    transform: rotate(45deg);
+transform: rotate(45deg);
 }
 
 .basketClose::before {
-    transform: rotate(-45deg);
+transform: rotate(-45deg);
 }
 
 .basketClose:hover {
-    opacity: .7;
+opacity: .7;
 }
 
 .discountWrapper{
